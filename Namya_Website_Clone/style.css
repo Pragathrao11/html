@@ -1,0 +1,171 @@
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+  /* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1280,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  :root {
+      --step--2: clamp(0.79rem, calc(0.79rem + 0.02vw), 0.80rem);
+      --step--1: clamp(0.89rem, calc(0.85rem + 0.19vw), 1.00rem);
+      --step-0: clamp(1.00rem, calc(0.92rem + 0.42vw), 1.25rem);
+      --step-1: clamp(1.13rem, calc(0.98rem + 0.73vw), 1.56rem);
+      --step-2: clamp(1.27rem, calc(1.04rem + 1.15vw), 1.95rem);
+      --step-3: clamp(1.42rem, calc(1.08rem + 1.70vw), 2.44rem);
+      --step-4: clamp(1.60rem, calc(1.12rem + 2.42vw), 3.05rem);
+      --step-5: clamp(1.80rem, calc(1.13rem + 3.36vw), 3.82rem);
+  }
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      min-height: 100vh;
+      background-color: black;
+      color: white;
+      font-family: 'Manrope', sans-serif;
+
+  }
+
+  .content {
+      max-width: min(1280px, 80vw);
+      margin: 0 auto;
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      min-height: inherit;
+  }
+
+  header {
+      max-width: inherit;
+  }
+
+  .header-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+  }
+
+  .header-block {
+      height: 5px;
+      width: 5px;
+  }
+
+  .header-wrapper ul {
+      display: flex;
+      gap: 2rem;
+      padding-inline: 1.5rem;
+      padding-block: 1rem;
+      border-radius: 1000px;
+      border: 1px solid #5b5b5b;
+      position: fixed;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: max-content;
+
+  }
+
+  li {
+      text-decoration: none;
+      list-style: none;
+      font-size: 1rem;
+  }
+
+  .hero {
+      padding-inline: 1.2rem;
+      display: grid;
+      place-content: center;
+      margin-top: calc(3rem + 4vw);
+      row-gap: 1.5rem;
+
+  }
+
+  .text {
+      max-width: min(900px, 100%);
+
+  }
+
+
+  .hero h1 {
+      font-size: var(--step-4);
+      font-weight: 700;
+  }
+
+  .hero p {
+      font-size: var(--step-0);
+      font-weight: 500;
+      margin-block-start: 1.5rem;
+  }
+
+  .avail {
+      font-size: var(--step--1);
+      color: rgb(136, 136, 136);
+  }
+
+  .buttons {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: flex-start;
+  }
+
+  .btn {
+      border: none;
+      color: white;
+      padding: 12px 2rem;
+      border-radius: 10rem;
+      font-size: var(--step-0);
+      cursor: pointer;
+      border: 1px solid rgb(76, 76, 76);
+
+  }
+
+  .hire {
+      background-color: rgb(138, 61, 255);
+      margin-right: 1rem;
+      flex-basis: 500px;
+  }
+
+  .template {
+      background-color: rgb(17, 17, 17);
+      flex-basis: 500px;
+
+  }
+
+
+  .portfolio {
+      margin-block-start: 7rem;
+  }
+
+  img {
+      aspect-ratio: 16/9;
+      max-width: 100%;
+  }
+
+  .folios {
+      display: grid;
+      margin-block-start: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, calc(100%/3 - 3rem)));
+      gap: 3rem;
+      place-content: center;
+      cursor: pointer;
+  }
+
+  @media screen and (max-width:600px) {
+    
+    
+    .header-wrapper ul{
+        bottom: 10px;
+    }
+
+  }
+
+  @media screen and (min-width: 600px){
+    .header-wrapper ul{
+        top: 10px
+    }
+  }
